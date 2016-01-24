@@ -26,7 +26,7 @@ QuickBib.BrowserOverlay = {
          * orig: http://link.springer.com/chapter/10.1007%2F978-3-319-09195-2_1
          * cite: http://link.springer.com/export-citation/chapter/10.1007/978-3-319-09195-2_1.bib
          */
-        let citationURL = currentURL.replace("/chapter", "/export-citation/chapter").replace("%2F", "/") + ".bib";
+        let citationURL = currentURL.replace("/chapter", "/export-citation/chapter").replace("%2F", "/").replace(/#page-\d+/,'')+ ".bib";
         let tBrowser = top.document.getElementById("content");
         let tab = tBrowser.addTab(citationURL);
         // use this line to focus the new tab, otherwise it will open in background
