@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/" ?>
+<?xml-stylesheet type="text/css"
+  href="chrome://quickbib/skin/browserOverlay.css" ?>
+
+<!DOCTYPE overlay SYSTEM
+  "chrome://quickbib/locale/browserOverlay.dtd">
+
+<overlay id="quickbib-browser-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript"
+    src="chrome://quickbib/content/browserOverlay.js" />
+
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="quickbib-string-bundle"
+      src="chrome://quickbib/locale/browserOverlay.properties" />
+  </stringbundleset>
+
+  <menubar id="main-menubar">
+    <menu id="quickbib-hello-menu" label="&quickbib.hello.label;"
+      accesskey="&quickbib.helloMenu.accesskey;" insertafter="helpMenu">
+      <menupopup>
+        <menuitem id="quickbib-hello-menu-item"
+          label="&quickbib.hello.label;"
+          accesskey="&quickbib.helloItem.accesskey;"
+          oncommand="QuickBib.BrowserOverlay.sayHello(event);" />
+      </menupopup>
+    </menu>
+  </menubar>
+
+  <vbox id="appmenuSecondaryPane">
+    <menu id="quickbib-hello-menu-2" label="&quickbib.hello.label;"
+      accesskey="&quickbib.helloMenu.accesskey;"
+      insertafter="appmenu_addons">
+      <menupopup>
+        <menuitem id="quickbib-hello-menu-item-2"
+          label="&quickbib.hello.label;"
+          accesskey="&quickbib.helloItem.accesskey;"
+          oncommand="QuickBib.BrowserOverlay.sayHello(event);" />
+      </menupopup>
+    </menu>
+  </vbox>
+</overlay>
