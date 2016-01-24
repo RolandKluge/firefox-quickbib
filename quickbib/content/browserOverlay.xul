@@ -18,7 +18,15 @@
       src="chrome://quickbib/locale/browserOverlay.properties" />
   </stringbundleset>
 
-  <menubar id="main-menubar">
+  <menupopup id="menu_ToolsPopup">
+    <menuitem id="quickbib-hello-menu-item-3"
+        label="&quickbib.hello.label;"
+        accesskey="&quickbib.helloItem.accesskey;"
+        oncommand="QuickBib.BrowserOverlay.sayHello(event);" />
+  </menupopup>
+
+  <!-- The following adds an extra menu to the menu bar -->
+  <!-- <menubar id="main-menubar">
     <menu id="quickbib-hello-menu" label="&quickbib.hello.label;"
       accesskey="&quickbib.helloMenu.accesskey;" insertafter="helpMenu">
       <menupopup>
@@ -29,7 +37,8 @@
       </menupopup>
     </menu>
   </menubar>
-
+  -->
+  <!--
   <vbox id="appmenuSecondaryPane">
     <menu id="quickbib-hello-menu-2" label="&quickbib.hello.label;"
       accesskey="&quickbib.helloMenu.accesskey;"
@@ -42,4 +51,5 @@
       </menupopup>
     </menu>
   </vbox>
+  -->
 </overlay>
